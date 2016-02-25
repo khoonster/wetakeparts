@@ -1,0 +1,52 @@
+/* CSS declarations go here */
+body {
+    margin: 0; padding: 0;
+}
+h1 {
+    width: 90%;
+    margin: 0 5%;
+    padding: 1% 0;
+    font-family: Helvetica-bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+    border-bottom: 0.15em solid black;
+    letter-spacing: 2pt;
+}
+
+.thing {
+    width: 90%;
+    margin: 2% 5% 0 5%;
+    font-family: Helvetica;
+    font-size: 15pt;
+    color: black;
+}
+
+.basic {
+    width: 90%;
+    margin: 0 5%;
+}
+    .basic input[name=submitter] {
+        max-width: 25%;
+        min-width: 20px;
+    }
+    .basic input[name=part] {
+        max-width: 50%;
+    }
+    .basic input[name=description] {
+        max-width: 50%;
+    }
+    .basic input[type=submit] {
+        position: fixed; bottom: 10px;
+        text-align: center;
+        margin-left: -25px;
+        width: 50%; height: 50%;
+        min-width: 150px; min-height: 150px;
+        border-radius: 100%;
+    }
+
+
+.delete {
+    color: red;
+}

@@ -1,0 +1,33 @@
+<head>
+  <title>Khoon's Collection</title>
+</head>
+
+<body>
+  <h1>Some parts that describe larger experiences</h1>
+  {{#each things}}
+    {{> thing}}
+  {{/each}}
+
+  <hr>
+  
+  {{> new}}
+
+</body>
+
+<template name="thing">
+  <div class="thing">
+      <!-- These automatic helpers output the value of that attribute of the database record -->
+      {{submitter}} {{part}} {{description}}
+      <a href="#" class="delete">Delete!</a>
+  </div>
+</template>
+
+
+<template name="new">
+  <form class="basic">
+    <input type="text" name="submitter" placeholder="Submitter" autofocus>
+    <input type="text" name="part" placeholder="Part">
+    <input type="text" name="description" placeholder="Description">
+    <input type="submit">
+  </form>
+</template>
