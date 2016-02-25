@@ -1,21 +1,29 @@
 /* CSS declarations go here */
 body {
     margin: 0; padding: 0;
-}
-h1 {
-    width: 90%;
-    margin: 0 5%;
-    padding: 1% 0;
-    font-family: Helvetica-bold;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    padding-bottom: 0.5em;
-    border-bottom: 0.15em solid black;
-    letter-spacing: 2pt;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
+header {
+    width: 100%;
+    border-bottom: 1pt solid black;
+    font-size: 15pt;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 10pt;
+    clear: both;
+}
+    h1 {
+        margin-left: 20px;
+        float: left;
+    }
+    h2 {
+        float: right;
+        margin-right: 20px;
+    }
+
 .thing {
+    clear: both;
     width: 90%;
     margin: 2% 5% 0 5%;
     font-family: Helvetica;
