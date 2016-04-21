@@ -1,39 +1,89 @@
-<head>
-  <title>We Take Parts</title>
-</head>
-
-<body>
+<template name="layout">
   <header>
-    <div>
-      <h1>We Take Parts</h1>
-      <h2>&#8277;</h2>
-    </div>  
+    <h1 class="left">
+      {{#if parent_id}}
+        <a href="/{{parent_id}}">{{experience}}</a>
+      {{else}}
+        <a href="/">We Take Part(s)</a>
+      {{/if}}
+    </h1>
+    <h1 class="right">
+      <a href="/about">&#8277;</a>
+    </h1>
   </header>
+  {{> yield}}
+</template>
 
-  {{#each things}}
-    {{> thing}}
-  {{/each}}
+<template name="about">
+  <h2>About this site</h2>
+</template>
 
-  <hr>
+<template name="experiences">
+
+  <div class="content">
+    <h2>Experiences</h2>
+  </div>
+
+  {{> submit}}
+
+  <div class="container">
+    {{#each experiences}}
+      {{> thing}}
+    {{/each}}
+  </div>
+
+</template>
+
+<template name="parts">
+
+  <div class="content">
+    <h2>Parts</h2>
+  </div>
+
+  {{> submit}}
   
-  {{> new}}
+  <div class="container">
+    {{#each parts}}
+      {{> thing}}
+    {{/each}}
+  </div>
 
-</body>
+</template>
+
+<template name="submit">
+  {{#if submitting}} 
+    {{> entry_form}}
+    {{> cancel_entry_button}}
+  {{else}}  
+    {{> new_entry_button}}
+  {{/if}}  
+</template>
 
 <template name="thing">
-  <div class="thing">
-      <!-- These automatic helpers output the value of that attribute of the database record -->
-      {{submitter}} {{part}} {{description}}
-      <a href="#" class="delete">Delete!</a>
+  <div class="around_thing">
+    <a href="{{_id}}">
+      <div class="thing">
+          <!-- These automatic helpers output the value of that attribute of the database record -->
+          {{experience}} <!--{{submitter}} -->
+          <a href="#" class="delete">&times;</a>
+          {{{has_parts}}}
+      </div>
+    </a>  
   </div>
 </template>
 
+<template name="new_entry_button">
+  <input type="button" value="New Entry" class="new_entry_button">
+</template>
 
-<template name="new">
+<template name="cancel_entry_button">
+  <input type="button" value="Cancel" class="cancel_entry_button">
+</template>
+
+<template name="entry_form">
   <form class="basic">
-    <input type="text" name="submitter" placeholder="Submitter" autofocus>
-    <input type="text" name="part" placeholder="Part">
-    <input type="text" name="description" placeholder="Description">
-    <input type="submit">
+    <input id="entry_name" type="text" class="left" name="experience" placeholder="{{share_placeholder}}" autofocus>
+    <input type="text" class="right" name="submitter" placeholder="Your name" required>
+    <input type="submit" id="submit" value="Enter">
   </form>
 </template>
