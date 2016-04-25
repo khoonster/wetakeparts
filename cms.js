@@ -38,7 +38,7 @@ if (Meteor.isClient) {
   // Template.registerHelper('total_parts', function() {
   Template.layout.helpers({
     total_parts: function() {
-      return Things.find().count() + ' total parts';
+      return Things.find().count() + 'total parts';
     }
   });
 
@@ -66,6 +66,7 @@ if (Meteor.isClient) {
       Meteor.defer(function() { $('#entry_name').focus(); });
     }
   })
+
   
     Template.cancel_entry_button.events({
     "click .cancel_entry_button": function(event) {
@@ -76,15 +77,15 @@ if (Meteor.isClient) {
   Template.thing.helpers({
     has_parts: function() {
       if (Things.find({parent_id: this._id}).count() > 0) {
-//        return 'has_parts';
+        return '&#8598;';
       }
-      // var c = Things.find({parent_id: this._id}).count();
-      // if (c > 0) {
-      //   return '<span class="has_parts">' + c + '</span>';
-      // }
-      // else {
-      //   return '<span class="no_parts">0</span>';
-      // }
+      var c = Things.find({parent_id: this._id}).count();
+      if (c > 0) {
+         return '<span class="has_parts">' + c + '</span>';
+       }
+       else {
+         return '<span class="no_parts">0</span>';
+       }
       }
     }
   )
@@ -102,7 +103,6 @@ if (Meteor.isClient) {
   Template.entry_form.helpers({
     
     share_placeholder: function() {
-      console.log(this);
       // Both of these approaches work the same
       //if (Router.current().route.getName() == 'parts') {
       if (this._id) {
@@ -141,5 +141,16 @@ if (Meteor.isClient) {
       
     }
   });
+
+//  Template.about.events({
+//    "click .right": function(event) {
+//      if ('/about', true);
+//      Session.set('submitting', true);
+//      Meteor.defer(function() { $('#entry_name').focus(); });
+//    }
+//  })
+
+
+
 
 }

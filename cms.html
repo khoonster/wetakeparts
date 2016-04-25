@@ -1,8 +1,8 @@
 <template name="layout">
   <header>
     <h1 class="left">
-      {{#if parent_id}}
-        <a href="/{{parent_id}}">{{experience}}</a>
+      {{#if _id}}
+        <a href="/{{parent_id}}"><span class="arrow">&#8598;</span>{{experience}}</a>
       {{else}}
         <a href="/">We Take Part(s)</a>
       {{/if}}
@@ -15,7 +15,11 @@
 </template>
 
 <template name="about">
-  <h2>About this site</h2>
+  <h2 id="about">
+    ...is an archive of our daily social experiences. 
+    Each experience is described by its parts, which are further described by their respective parts. 
+    Please use this archive as ingredients for reenactments or new stories. 
+  </h2>
 </template>
 
 <template name="experiences">
