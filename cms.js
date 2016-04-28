@@ -36,11 +36,11 @@ if (Meteor.isClient) {
   
   // Global helper
   // Template.registerHelper('total_parts', function() {
-  Template.layout.helpers({
-    total_parts: function() {
-      return Things.find().count() + 'total parts';
-    }
-  });
+  // Template.layout.helpers({
+  //   total_parts: function() {
+  //     return Things.find().count() + 'total parts';
+  //   }
+  // });
 
   Template.experiences.helpers({
     experiences: function() {
@@ -74,31 +74,31 @@ if (Meteor.isClient) {
     }
   })
   
-  Template.thing.helpers({
-    has_parts: function() {
-      if (Things.find({parent_id: this._id}).count() > 0) {
-        return '&#8598;';
-      }
-      var c = Things.find({parent_id: this._id}).count();
-      if (c > 0) {
-         return '<span class="has_parts">' + c + '</span>';
-       }
-       else {
-         return '<span class="no_parts">0</span>';
-       }
-      }
-    }
-  )
+//  Template.thing.helpers({
+//    has_parts: function() {
+//      if (Things.find({parent_id: this._id}).count() > 0) {
+//        return '&#8598;';
+//      }
+//      var c = Things.find({parent_id: this._id}).count();
+//      if (c > 0) {
+//         return '<span class="has_parts">' + c + '</span>';
+//       }
+//       else {
+//         return '<span class="no_parts">0</span>';
+//       }
+//      }
+//    }
+//  )
   
-  Template.thing.events({
-    "click a.delete": function(event) {
+//  Template.thing.events({
+//    "click a.delete": function(event) {
       
-      event.preventDefault();
+//      event.preventDefault();
       //Using the Mongo ID of this template's object,
       //tell Mongo to remove the object from the database.
-      Things.remove(this._id);
-    }
-  });
+//      Things.remove(this._id);
+//    }
+//  });
   
   Template.entry_form.helpers({
     

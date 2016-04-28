@@ -2,28 +2,30 @@
   <header>
     <h1 class="left">
       {{#if _id}}
-        <a href="/{{parent_id}}"><span class="arrow">&#8598;</span>{{experience}}</a>
+        <a href="/{{parent_id}}"><span class="arrow">&#8592;</span>{{experience}}</a>
       {{else}}
         <a href="/">We Take Part(s)</a>
       {{/if}}
-    </h1>
-    <h1 class="right">
-      <a href="/about">&#8277;</a>
     </h1>
   </header>
   {{> yield}}
 </template>
 
 <template name="about">
+  <h1 class="right">
+    <a href="/">&#8277;</a>
+  </h1>
   <h2 id="about">
-    ...is an archive of our daily social experiences. 
+    is an expanding collection of social experiences that we take part in on a daily basis. 
     Each experience is described by its parts, which are further described by their respective parts. 
-    Please use this archive as ingredients for reenactments or new stories. 
+    Please use this archive to preserve your experiences, to serve as ingredients for reenactments and new stories. 
   </h2>
 </template>
 
 <template name="experiences">
-
+  <h1 class="right">
+    <a href="/about">&#8277;</a>
+  </h1>
   <div class="content">
     <h2>Experiences</h2>
   </div>
@@ -68,8 +70,8 @@
     <a href="{{_id}}">
       <div class="thing">
           <!-- These automatic helpers output the value of that attribute of the database record -->
-          {{experience}} <!--{{submitter}} -->
-          <a href="#" class="delete">&times;</a>
+          <span>&#8594;</span>{{experience}} <!--{{submitter}} -->
+          <!--<a href="#" class="delete">&times;</a>-->
           {{{has_parts}}}
       </div>
     </a>  

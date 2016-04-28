@@ -83,18 +83,18 @@ header h1{
         transition-timing-function: linear;
         max-width: 90%;
     }
-    .arrow {
-        display: none;
-    }
-    .arrow:hover {
-        display: block;
-    }
     h1.left:hover {
         letter-spacing: 30px;
     }
     
-    h1.right {
-        float:right;
+h1.right {
+    position: fixed;
+    top: 27px; right: 30px;
+    display: inline-block;
+        float: right;
+        max-width: 10%;
+        box-sizing: border-box;
+
     }
 
 .content {
@@ -108,7 +108,7 @@ header h1{
     box-sizing: border-box;
 }
 .thing:hover {
-    color: blue;
+
 }
 
     .thing {
@@ -203,5 +203,6 @@ header h1{
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 5px;
+    line-height: 42px;
 }
 
