@@ -112,7 +112,6 @@ if (Meteor.isClient) {
         return 'Share experience';
       }
     }
-    
   })
   
   Template.entry_form.events({
