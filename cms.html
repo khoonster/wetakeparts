@@ -2,7 +2,7 @@
   <header>
     <h1 class="left">
       {{#if _id}}
-        <a href="/{{parent_id}}"><span class="arrow">&#8592;</span>{{experience}}</a>
+        <a href="/{{parent_id}}"><span class="arrow_back">&#8592;</span>{{experience}}</a>
       {{else}}
         <a href="/">We Take Part(s)</a>
       {{/if}}
@@ -16,7 +16,7 @@
     <a href="/">&#8277;</a>
   </h1>
   <h2 id="about">
-    is an expanding collection of social experiences that we take part in on a daily basis. 
+    is an expanding collection of social experiences that we take part in everyday. 
     Each experience is described by its parts, which are further described by their respective parts. 
     Please use this archive to preserve your experiences, to serve as ingredients for reenactments and new stories. 
   </h2>
@@ -41,7 +41,6 @@
 </template>
 
 <template name="parts">
-
   <div class="content">
     <h2>Parts</h2>
   </div>
@@ -70,7 +69,7 @@
     <a href="{{_id}}">
       <div class="thing">
           <!-- These automatic helpers output the value of that attribute of the database record -->
-          <span>&#8594;</span>{{experience}} <!--{{submitter}} -->
+          <span class="arrow_fwd">&#8594;</span>{{experience}} <!--{{submitter}} -->
           <!--<a href="#" class="delete">&times;</a>-->
           {{{has_parts}}}
       </div>

@@ -142,15 +142,4 @@ if (Meteor.isClient) {
     }
   });
 
-//  Template.about.events({
-//    "click .right": function(event) {
-//      if ('/about', true);
-//      Session.set('submitting', true);
-//      Meteor.defer(function() { $('#entry_name').focus(); });
-//    }
-//  })
-
-
-
-
 }

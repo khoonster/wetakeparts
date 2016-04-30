@@ -87,14 +87,15 @@ header h1{
         letter-spacing: 30px;
     }
     
+    
+    
 h1.right {
     position: fixed;
     top: 27px; right: 30px;
     display: inline-block;
-        float: right;
-        max-width: 10%;
-        box-sizing: border-box;
-
+    float: right;
+    max-width: 10%;
+    box-sizing: border-box;
     }
 
 .content {
@@ -107,15 +108,16 @@ h1.right {
     border-bottom: 1px solid black;
     box-sizing: border-box;
 }
-.thing:hover {
-
-}
 
     .thing {
         clear: both;
         width: 100%;
         padding: 10px 2%;
         overflow: auto;
+    }
+    
+    .right:hover {
+        cursor: url("arrow_out.png"), auto;
     }
 
 .basic {
@@ -202,7 +204,12 @@ h1.right {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    letter-spacing: 5px;
     line-height: 42px;
 }
 
+.arrow_fwd .arrow_back {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    vertical-align: top;
+}
