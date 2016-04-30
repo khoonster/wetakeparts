@@ -90,15 +90,15 @@ if (Meteor.isClient) {
 //    }
 //  )
   
-//  Template.thing.events({
-//    "click a.delete": function(event) {
+  Template.thing.events({
+    "click a.delete": function(event) {
       
-//      event.preventDefault();
+      event.preventDefault();
       //Using the Mongo ID of this template's object,
       //tell Mongo to remove the object from the database.
-//      Things.remove(this._id);
-//    }
-//  });
+      Things.remove(this._id);
+    }
+  });
   
   Template.entry_form.helpers({
     
