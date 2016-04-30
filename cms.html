@@ -2,9 +2,12 @@
   <header>
     <h1 class="left">
       {{#if _id}}
-        <a href="/{{parent_id}}"><span class="arrow_back">&#8592;</span>{{experience}}</a>
+        <a href="/{{parent_id}}">
+          <!--<span class="arrow_back">&#8592;</span>-->
+          {{experience}}
+        </a>
       {{else}}
-        <a href="/">We Take Part(s)</a>
+        <a class="sitename" href="/">We Take Part(s)</a>
       {{/if}}
     </h1>
   </header>
@@ -13,7 +16,7 @@
 
 <template name="about">
   <h1 class="right">
-    <a href="/">&#8277;</a>
+    <a href="/" class="asterisk">&#8277;</a>
   </h1>
   <h2 id="about">
     is an expanding collection of social experiences that we take part in everyday. 
@@ -69,7 +72,9 @@
     <a href="{{_id}}">
       <div class="thing">
           <!-- These automatic helpers output the value of that attribute of the database record -->
-          <span class="arrow_fwd">&#8594;</span>{{experience}} <!--{{submitter}} -->
+          <!--<span class="arrow_fwd">&#8594;</span>-->
+          {{experience}}
+          <!--{{submitter}} -->
           <!--<a href="#" class="delete">&times;</a>-->
           {{{has_parts}}}
       </div>

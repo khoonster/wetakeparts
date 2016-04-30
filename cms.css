@@ -116,10 +116,6 @@ h1.right {
         overflow: auto;
     }
     
-    .right:hover {
-        cursor: url("arrow_out.png"), auto;
-    }
-
 .basic {
     width: 100%;
     box-sizing: border-box;
@@ -213,3 +209,19 @@ h1.right {
     font-size: 30px;
     vertical-align: top;
 }
+
+    .sitename:hover {
+        cursor: default !important;
+    }
+
+    .thing:hover {
+        cursor: e-resize;
+    }
+    
+    .left a:hover {
+        cursor: w-resize;
+    }
+    
+    .right:hover {
+        cursor: default !important;
+    }
