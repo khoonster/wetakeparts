@@ -215,13 +215,19 @@ h1.right {
     }
 
     .thing:hover {
-        cursor: e-resize;
+        /*cursor: e-resize;*/
+        cursor: url(arrowin16.svg) 16 8, auto;
+
     }
     
-    .left a:hover {
-        cursor: w-resize;
+    .left:hover {
+        /*cursor: w-resize;*/
     }
     
     .right:hover {
         cursor: default !important;
+    }
+    
+    .backback:hover {
+        cursor:url(arrowout16.svg) 16 8, auto;
     }
