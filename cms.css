@@ -216,7 +216,7 @@ h1.right {
 
     .thing:hover {
         /*cursor: e-resize;*/
-        cursor: url(arrowintest2.svg) 50 25, auto;
+        cursor: url(arrowintest2.svg) 40 20, auto;
 
     }
     
@@ -225,7 +225,7 @@ h1.right {
     }
     
     .backback:hover {
-        cursor:url(arrowoutest2.svg) 50 25, auto;
+        cursor:url(arrowoutest2.svg) 40 20, auto;
     }
     
     .content:hover {
