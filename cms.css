@@ -62,6 +62,15 @@ body {
     font-variant-ligatures: no-common-ligatures;
 }
 
+input {
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
 header {
     width: 100%;
     padding: 30px 2%;
@@ -75,22 +84,26 @@ header:after {
 }
 
 header h1{
-    display: inline-block;  
+    display: inline-block; 
+    font-size: 30px;
+
 }
-    h1.left{
+
+h1.left{
         float:left;
         transition: letter-spacing 50s;
         transition-timing-function: linear;
         max-width: 90%;
     }
-    h1.left:hover {
+
+h1.left:hover {
         letter-spacing: 30px;
     }
     
     
     
 h1.right {
-    position: fixed;
+    position: absolute;
     top: 27px; right: 30px;
     display: inline-block;
     float: right;
@@ -121,6 +134,7 @@ h1.right {
     box-sizing: border-box;
     padding: 0;
     border-bottom: 1px solid black;
+    float:left;
 }
     .basic input {
         font-size: 30px;
@@ -128,19 +142,24 @@ h1.right {
         font-weight: bold;
         padding: 10px 2%;
         font-family: Helvetica, Arial, sans-serif;
+        float: left;
     }
     .basic input[name=experience] {
         width: 80%;
         border-right: 0;
         border-left: 0;
         border-top: 0;
+        float: left;
     }
     .basic input[name=submitter] {
-        width: 19%;
+        width: 20%;
         border-right: 0;
         border-left: 0;
         border-top: 0;
+        float: left;
     }
+    
+    
     #submit {
         width: 50%;
         height: 80px;
@@ -235,3 +254,13 @@ h1.right {
     .asterisk:hover {
         cursor: default !important;
     }
+    
+@media (max-width: 1200px) {    
+    .basic input[name=experience] {
+    width: 100%;
+    border-bottom: 1px solid black;
+    }
+    .basic input[name=submitter] {
+    width: 100%;
+    }
+}
